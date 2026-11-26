@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hospital Data Engineering — PySpark + PostgreSQL Medallion Pipeline
 
 This project is built for the uploaded dataset (patients: 1,000 rows; services_weekly: 208; staff: 110; staff_schedule: 6,552). It reads the existing PostgreSQL `bronze` schema, cleans/transforms data with PySpark, and writes Silver and Gold tables back to PostgreSQL.
@@ -92,3 +93,6 @@ SELECT * FROM gold.staff_attendance_summary ORDER BY service, role;
 - Silver and Gold target tables are rebuilt on each run (`overwrite`), making runs repeatable. Do not manually add data to these output tables because the next run replaces them.
 - Invalid records are currently filtered out by the explicit validation rules in `src/pipeline.py`. For production, extend the project to persist rejected records to quarantine tables and add logging/alerting.
 - The `DATA_LAKE_LANDING` variable documents the local raw-file location; this first pipeline version uses PostgreSQL Bronze as the Spark input. Landing-to-Bronze automated ingestion can be added as a separate stage after validating your local environment.
+=======
+# HospitalBedsManagement
+>>>>>>> 00d4795999b6674697b1200f5bcbbd2e7b6efc3c
